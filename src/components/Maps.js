@@ -1,37 +1,70 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import $ from "jquery";
+var map, marker;
 
-const Maps = React.createClass({
-	getInitialState() {
-		return {
-			name: "",
-			zip: null,
-			lat: null,
-			lng: null
-		};
-	},
-	// componentDidMount() {
-		
-	// 	  // $('iframe').attr('src', url + mode +'?key='+ key +param);
-	// 	  $('iframe').attr('src', 
-	// 	  	"https://www.google.com/maps/embed/v1/search?key=AIzaSyDbJUsdZAQ7Zlsa3L9Vdu1pM4E__7kZZDc&q=C4Q"
-	// 	  	// url + mode +'?key='+ key +param
-	// 	  	);
+function initMap() {
+    // create a new map instance of the Map object constructor
+    // the created map object will be inserted in the div with id 'map'
+  map = new google.maps.Map(document.getElementById('map'), {
+    // MAP OPTIONS
+    // REQUIRED: center, zoom
+    // initial resolution at which to display the map is set by 
+    zoom: 13,
+    center: {lat: 59.325, lng: 18.070}
+    
+  });
+  console.log("map: ", map);
+  
+  marker = new google.maps.Marker({
+    map: map,
+    draggable: true,
+    icon: "http://preloaders.net/preloaders/489/Classic%20map%20marker.gif",
+    animation: google.maps.Animation.BOUNCE,
+    position: {lat: 59.327, lng: 18.067}
+  });
+  console.log("marker: ", marker);
+  
+  marker.addListener('click', toggleBounce);
+}
 
-	// },
+function toggleBounce() {
+  if (marker.getAnimation() !== null) {
+    marker.setAnimation(null);
+  } else {
+    marker.setAnimation(google.maps.Animation.BOUNCE);
+  }
+}
 
-	render() {
-		return (
-			 <iframe
-			  id="map"
-			  width="600"
-			  height="450"
-			  frameBorder="0"
-			  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBR3YnmH_sCLgjpiBnGsIb8YALCQvMbhRQ&q=Coalition+for+Queens" allowFullScreen>
-			</iframe>
-		);
-	}
-});
+function setNewCenter(event) {
+  event.preventDefault()
+}
 
-export default Maps;
+$('form').submit(setNewCenter)
+
+
+function Company(name) {
+  this.name = name;
+  this.size = 0;
+  this.employees = [];
+}
+
+function Employee(name) {
+  this.name = name;
+  this.company = null;
+  this.salary = 0;
+}
+
+Company.prototype.hire = function (employee, salary) {
+  this.employee.push(employee);
+  this.size++;
+  employee.company = this.name;
+  employee.salary = salary;
+}
+
+var c4q = new Company("Coalition for Queens")
+var charles = new Employee("Charles Kuang")
+var nate = new Employee("Nate Maddrey")
+c4q.hire(charles, 500000)
+c4q.hire(nate, 1000000)
+c4q.employees
+c4q.size
+charles.salary
+nate.salary;
