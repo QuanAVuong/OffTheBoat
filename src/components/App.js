@@ -1,7 +1,9 @@
 //This component handles the App template used on every page
 import React, {PropTypes} from 'react';
 import Header from './common/Header';
+// import HeaderTest from './common/header-test';
 import $ from 'jquery';
+
 
 class App extends React.Component{
 	render(){

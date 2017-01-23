@@ -6,13 +6,15 @@ import AboutPage from '../components/about/AboutPage';
 import CheckListContainer from '../components/checklist/CheckListContainer';
 import {onCheckList} from './route_data';
 import StepContainer from '../components/steps/StepContainer';
-
+import HeaderTest from "../components/common/header-test"
 
 export default (
-	<Route path="/" component={App}>
-		<IndexRoute component ={HomePage}/>
-		<Route path="checklist" component ={CheckListContainer} />
-		<Route path ="steps" component={StepContainer} />
-		<Route path ="about" component={AboutPage}/>
+	<Route>
+		<Route path="/home" component ={HeaderTest}/>
+		<Route path="/" component={App}>
+				<Route path="checklist" component ={CheckListContainer} />
+				<Route path ="steps" component={StepContainer} />
+				<Route path ="about" component={AboutPage}/>
+		</Route>
 	</Route>
 );
