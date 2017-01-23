@@ -3,14 +3,14 @@ import ReactDOM from "react-dom";
 import $ from "jquery";
 
 const Maps = React.createClass({
-	getInitialState() {
-		return {
-			name: "",
-			zip: null,
-			lat: null,
-			lng: null
-		};
-	},
+	// getInitialState() {
+	// 	return {
+	// 		name: "",
+	// 		zip: null,
+	// 		lat: null,
+	// 		lng: null
+	// 	};
+	// },
 	// componentDidMount() {
 
 	// 	  // $('iframe').attr('src', url + mode +'?key='+ key +param);
@@ -21,7 +21,12 @@ const Maps = React.createClass({
 
 	// },
 
+	// src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBR3YnmH_sCLgjpiBnGsIb8YALCQvMbhRQ&q=Coalition+for+Queens"
+	// let query = 
+	
 	render() {
+		let src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyBR3YnmH_sCLgjpiBnGsIb8YALCQvMbhRQ&q=" + this.props.query;
+		
 		return (
 
 			 <iframe
@@ -29,7 +34,7 @@ const Maps = React.createClass({
 			  width="600"
 			  height="450"
 			  frameBorder="0"
-			  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBR3YnmH_sCLgjpiBnGsIb8YALCQvMbhRQ&q=Coalition+for+Queens" allowFullScreen>
+			  src={src} allowFullScreen>
 			</iframe>
 		);
 	}

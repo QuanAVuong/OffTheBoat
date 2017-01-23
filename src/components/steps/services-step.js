@@ -25,7 +25,7 @@ const ServicesStep = React.createClass({
         <div className="collapsible-header"><i className="material-icons">filter_drama</i>{this.props.text}</div>
         <div className="collapsible-body">
           {/*Google map will live here!!! */}
-          <Maps />
+          <Maps query={this.props.service[0].company} />
           <ul>{this.displayServices()}</ul>
         </div>
       </li>

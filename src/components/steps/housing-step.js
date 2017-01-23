@@ -24,7 +24,7 @@ const HousingStep = React.createClass({
       <li>
         <div className="collapsible-header"><i className="material-icons">filter_drama</i>{this.props.text}</div>
         <div className="collapsible-body">
-          <Maps />
+          <Maps query={this.props.housing[0].company} />
           <ul>{this.displayHousing()}</ul>
         </div>
       </li>

@@ -37,20 +37,20 @@ class CheckList extends Component {
 				<form >
 					<p>
 						<input type="checkbox" name='documents' id="filled-in-box" onChange={this.handleChange} />
-						<label htmlFor="filled-in-box"><span>Documents</span></label>
-					</p>
+						<label htmlFor="filled-in-box"><span>IDNYC: Photo-ID Used For Identification</span></label>
+					</p> <hr/> 
 					<p>
 						<input type="checkbox" name='services' className="services" id="filled-in-box-2" onChange={this.handleChange}/>
-						<label htmlFor="filled-in-box-2"><span>Government Services</span></label>
-					</p>
+						<label htmlFor="filled-in-box-2"><span>Training Services: Step Your Game Up With The Latest Professional Skills</span></label>
+					</p> <hr/>
 					<p>
 						<input type="checkbox" name='jobs' className="jobs" id="filled-in-box-3" onChange={this.handleChange} />
-						<label htmlFor="filled-in-box-3"><span>Jobs</span></label>
-					</p>
+						<label htmlFor="filled-in-box-3"><span>Jobs: Find The Closest Job Resource Center</span></label>
+					</p> <hr/>
 					<p>
 						<input type="checkbox" name='housing' className="housing" id="filled-in-box-4" onChange={this.handleChange} />
-						<label htmlFor="filled-in-box-4"><span>Housing</span></label>
-					</p>
+						<label htmlFor="filled-in-box-4"><span>Housing: Stranded Or Need Affordable Housing ? Click Here For Resources</span></label>
+					</p> <hr/>
 				</form>
 				<div className="row">
 					<form className="col s12">

@@ -23,7 +23,7 @@ const JobStep = React.createClass({
       <li>
         <div className="collapsible-header"><i className="material-icons">filter_drama</i>{this.props.text}</div>
         <div className="collapsible-body">
-          <Maps />
+          <Maps query={this.props.jobs[0].company} />
           <p>{this.displayJob()}</p>
         </div>
       </li>
