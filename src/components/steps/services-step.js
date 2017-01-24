@@ -12,7 +12,7 @@ const ServicesStep = React.createClass({
             {service.city}, {service.state}
             {service.zip}<br />
             {service.phone}<br/>
-            {service.description}<br/>
+            {/*service.description*/}
             <br/>
           </li>)
       }

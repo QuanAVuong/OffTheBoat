@@ -63,7 +63,7 @@ class CheckList extends Component {
 						</div>
 					</form>
 				</div>
-				<button onClick={this.props.handleSelected}><Link to="/steps">Next</Link></button>
+				<button className="checklistButton" onClick={this.props.handleSelected}><Link to="/steps">Next</Link></button>
 			</div>
 		);
 	}

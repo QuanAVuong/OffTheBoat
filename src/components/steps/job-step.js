@@ -4,17 +4,19 @@ import Maps from "../Maps";
 const JobStep = React.createClass({
   displayJob() {
     return this.props.jobs.map((job, i) => {
-      return (
-        <li key={i}>
-          {job.company}<br/>
-          {job.address}<br/>
-          {job.city}<br/>
-          {/* {job.description}<br/> */}
-          {job.website}<br/>
-          {job.phone}<br/>
-          <br/>
-        </li>
-      )
+      if (i < 5) {
+        return (
+          <li key={i}>
+            {job.company}<br/>
+            {job.address}<br/>
+            {job.city}<br/>
+            {/* {job.description}<br/> */}
+            {job.website}<br/>
+            {job.phone}<br/>
+            <br/>
+          </li>
+        )
+      }
     })
   },
   render() {

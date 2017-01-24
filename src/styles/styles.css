@@ -75,3 +75,35 @@ label > span {
 	font-size: 72px;
 	color: white;
 }
+
+.checklist-ul {
+	width: 1000px;
+}
+
+.app-body {
+	display: flex;
+	justify-content: center;
+}
+
+ul>li {
+	font-size: 20px;
+}
+
+.checklistButton {
+	margin-top: 20px;
+	padding: 10px;
+	color: white;
+	background-color: green;
+	width: 125px;
+	align-self: center;
+	margin: 0;
+	border: 1;
+	border-color: black;
+	border-style: solid;
+	opacity: none;
+	text-decoration: none;
+}
+
+.checklistButton>a:link {
+    color: white;
+}
